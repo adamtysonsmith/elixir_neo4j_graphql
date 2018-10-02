@@ -22,6 +22,6 @@ defmodule Neo4jPhoenixWeb.Router do
   scope "/api" do
     pipe_through :api
     forward "/graphiql", Absinthe.Plug.GraphiQL, schema: Neo4jPhoenixWeb.Schema, interface: :simple
-    # forward "/", Absinthe.Plug, schema: Neo4jPhoenixWeb.Schema
+    forward "/", Absinthe.Plug, schema: Neo4jPhoenixWeb.Schema
   end
 end
